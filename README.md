@@ -52,4 +52,4 @@ We welcome contributions! Whether it's bug reports, feature requests, or new fun
 ## Contact
 [Valeri Stoyanov] - [valeri.n.stoqnov@gmail.com] - [/https://github.com/ValeriNs1988]
 
-Project Link: https://github.com/https://github.com/ValeriNs1988/blue_window
+Project Link: https://github.com/ValeriNs1988/blue_window
