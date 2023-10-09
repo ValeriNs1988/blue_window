@@ -1,0 +1,12 @@
+@media (max-width: 576px){
+    .banner{
+        display: none;
+    }
+    .add-task .task-action,
+    .incomplete-task .task-action,
+    .edit-task .task-action{
+        flex-direction: column;
+        align-items: flex-start!important;
+        gap: 15px;
+    }
+}

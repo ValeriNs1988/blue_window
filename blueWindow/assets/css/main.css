@@ -1,0 +1,233 @@
+/*----------------------------------
+          Table Of Content
+    # General
+    # Header
+    # Footer
+    # Home Page
+    # Profile
+    # Dashboard
+    # Scroll to top
+
+-----------------------------------*/
+
+/*----------------------------------
+    # General
+-----------------------------------*/
+
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    overflow: auto;
+    scroll-behavior: smooth;
+    -ms-overflow-style: scrollbar;
+    box-sizing: border-box;
+}
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+body a:hover{
+    text-decoration: none;
+}
+p {
+    padding: 0;
+    margin: 0;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+main {
+    display: block;
+    min-height: calc(100vh - 80px);
+    margin-top: 80px;
+}
+
+
+::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+    background-color: var(--light);
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: var(--cyan);
+    border: solid 1px var(--light);;
+}
+
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    word-wrap: normal !important;
+    border: 0;
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+/*----------------------------------
+    # Header
+-----------------------------------*/
+
+header{
+    min-height: 80px;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    top: 0;
+}
+header .navbar-light .navbar-toggler{
+    border-color: var(--light);
+}
+header .navbar-light .navbar-toggler:focus-visible,
+header .navbar-light .navbar-toggler:focus{
+    outline: none;
+}
+header .navbar-light .navbar-toggler-icon{
+    filter: invert(1);
+}
+
+/*----------------------------------
+    # Footer
+-----------------------------------*/
+
+
+/*----------------------------------
+    # Home
+-----------------------------------*/
+
+section{
+    padding: 50px 0;
+}
+section.home-page{
+    padding-top: 100px;
+}
+.banner{
+    box-shadow: rgb(0 0 0 / 20%) 0 1px 11px;
+}
+.banner img{
+    max-width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.welcome-message{
+    z-index: 1;
+    border: 1px solid;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -50px;
+    box-shadow: rgb(0 0 0 / 20%) 0 1px 11px;
+}
+
+/*----------------------------------
+    # Profile
+-----------------------------------*/
+
+.user-image img{
+    max-width: 150px;
+    width: 100%;
+    max-height: 150px;
+    height: 100%;
+    object-fit: contain;
+}
+.user-information p {
+    border-bottom: 1px solid var(--contexify-separator-color);
+}
+
+/*----------------------------------
+    # Dashboard
+-----------------------------------*/
+
+
+.add-task input[type="text"],
+.add-task textarea,
+.edit-task input[type="text"],
+.edit-task textarea{
+    min-height: 48px;
+    border: 0;
+    border-bottom: 1px solid;
+    text-indent: 15px;
+}
+.add-task textarea,
+.edit-task textarea{
+    min-height: 200px;
+    resize: none;
+
+}
+.add-task input:focus-visible,
+.add-task textarea:focus-visible,
+.edit-task input:focus-visible,
+.edit-task textarea:focus-visible{
+    outline: none;
+    background-color: #f1f1f1;
+}
+
+.add-task .due-date,
+.edit-task .due-date{
+    min-width: 220px;
+}
+
+.incomplete-task{
+    background-color: #f1f1f1;
+}
+
+.single-incomplete,
+.single-completed{
+    border-bottom: 1px solid;
+}
+.single-incomplete:last-child,
+.single-completed:last-child{
+    margin-bottom: 0!important;
+    padding-bottom: 0!important;
+    border-bottom: 0;
+}
+
+/*----------------------------------
+    # Scroll to top
+-----------------------------------*/
+.scroll-to-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--dark);
+    color: var(--white);
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+    z-index: 999;
+    outline: 5px solid var(--contexify-separator-color);
+}
+
+.scroll-to-top-btn:hover {
+    opacity: 1;
+}
+.scroll-to-top-icon{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-90deg);
+}
+.scroll-to-top-icon:before{
+    content: "\2794";
+}
